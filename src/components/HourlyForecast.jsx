@@ -104,7 +104,7 @@ const HourlyForecast = ({ title, data }) => {
                     />
                     <Area
                         label={<CustomizedDot icon={data} />}
-                        animationBegin={4000}
+                        animationBegin={2500}
                         animationDuration={2000}
                         activeDot={false}
                         type="monotone"
