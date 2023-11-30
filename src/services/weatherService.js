@@ -3,11 +3,12 @@ import { DateTime } from "luxon";
 const API_KEY = `${process.env.REACT_APP_OPENWEATHER_API_KEY}`;
 const BASE_URL = `${process.env.REACT_APP_BASE_URL}`;
 
-const getWeatherData = (infoType, searchParams) => {
+const getWeatherData = async (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType);
     console.log(url);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
-    return fetch(url).then((res) => res.json());
+    const res = await fetch(url);
+    return await res.json();
 };
 
 const formatCurrentWeather = (data) => {
