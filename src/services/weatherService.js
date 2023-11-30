@@ -5,6 +5,7 @@ const BASE_URL = `${process.env.REACT_APP_BASE_URL}`;
 
 const getWeatherData = (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType);
+    console.log(url);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
     return fetch(url).then((res) => res.json());
 };
