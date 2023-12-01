@@ -38,7 +38,9 @@ const Map = ({ lat, lon }) => {
             scrollWheelZoom={true}>
             <ResizeMap />
             <ChangeView center={[lat, lon]} />
-            <TileLayer url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}@2x.png" />
+            <TileLayer
+                url={`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}@2x.png?api_key=${process.env.REACT_APP_MAP_KEY}`}
+            />
             <Marker map={this} position={[lat, lon]} />
         </MapContainer>
     );
