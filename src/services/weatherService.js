@@ -5,10 +5,8 @@ const BASE_URL = `${process.env.REACT_APP_BASE_URL}`;
 
 const getWeatherData = async (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType);
-    console.log(url);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
-    const res = await fetch(url);
-    return await res.json();
+    return fetch(url).then((res) => res.json());
 };
 
 const formatCurrentWeather = (data) => {

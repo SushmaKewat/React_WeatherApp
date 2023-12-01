@@ -10,6 +10,7 @@ import "../index.css";
 const Autocomplete = ({ value, setCity }) => {
     function onPlaceSelect(value) {
         const result =
+            value.properties.address_line1 ||
             value.properties.city ||
             value.properties.state ||
             value.properties.county ||
