@@ -9,6 +9,7 @@ import "../index.css";
 
 const Autocomplete = ({ value, setCity }) => {
     function onPlaceSelect(value) {
+        console.log(value);
         const result =
             value.properties.address_line1 ||
             value.properties.city ||
