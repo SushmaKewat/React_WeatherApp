@@ -29,5 +29,3 @@ You may also see any lint errors in the console.
 ![App screenshot](<Screenshot 2023-12-01 230753.png>)
 
 ![App screenshot](<Screenshot 2023-12-01 230455.png>)
-
-<video src="Mausam%20Demo.mp4" controls title="Title"></video>
